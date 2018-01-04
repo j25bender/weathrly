@@ -1,0 +1,38 @@
+.welcomeContainer {
+    height: 100vh;
+}
+
+.welcomeText {
+    
+}
+
+.welcome:active {
+    text-align: center;
+    background-color: lightcyan;
+    width: 90vw;
+    height: 10vh;
+    margin: auto;
+    top: 0;
+    position: relative;
+    top: 50%;
+    /* transform: translateY(-50%);  */
+}
+
+.welcome {
+    transition-timing-function: ease-in;
+    transition: 1.2s;
+    transform: translateY(0, -20px);
+
+    /* transform: translate(0,-75px) scale(2);
+    -webkit-transform: translate(0,-75px) scale(2);
+    -o-transform: translate(0,-75px) scale(2); 
+    -moz-transform: translate(0,-75px) scale(2); */
+
+    text-align: center;    
+    background-color: lightcyan;    
+    position: sticky;
+    top: 60px;
+    width: 90vw;
+    height: 60vh;
+    margin: auto;
+}
