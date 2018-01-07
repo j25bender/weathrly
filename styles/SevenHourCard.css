@@ -1,5 +1,20 @@
 .sevenHourCard {
-    width: 100px;
-    height: 200px;
-    background-color: gray;
-}
+    flex: 1;
+    border: 0.01rem solid ghostwhite;
+    margin: 1rem;
+    max-width: 15rem;
+    min-width: 5.5rem;
+    padding: 1rem;
+  }
+  
+  .temp {
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 1010px) {
+    .card {
+      align-content: flex-start;
+      flex-wrap: wrap;
+      min-width: 15rem;
+    }
+  }
