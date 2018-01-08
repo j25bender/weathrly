@@ -3,8 +3,8 @@
 }
 
 .welcome-transition {
-    text-align: center;    
-    background-color: lightcyan;    
+    text-align: center;
+    border: 0.02rem solid ghostwhite;    
     top: 60px;
     width: 90vw;
     height: 60vh;

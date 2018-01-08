@@ -1,4 +1,5 @@
 .cards {
+    color: #fff;    
     border: 0.01rem solid ghostwhite;    
     margin: 1rem;
     min-width: 5.5rem;
@@ -8,7 +9,8 @@
 .card {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;        
+    flex-direction: row;
+    justify-content: center;       
 }
 
 .tenDayCard {
@@ -40,5 +42,9 @@
       align-content: flex-start;
       flex-wrap: wrap;
       min-width: 15rem;
+    }
+
+    .tenDayHeader {
+        text-align: center;
     }
   }
