@@ -9,10 +9,12 @@ describe("App", () => {
   let app;
 
   beforeEach(() => {
-    localStorageMock.setItem('40201')
     app = mount(<App />);
+    window.localStorage = localStorageMock;  
+    
+    localStorageMock.setItem('location', '40201')
   });
-  console.log(localStorageMock.setItem)
+  console.log(localStorageMock)
   
   it("App should exist", () => {
     expect(app).toBeDefined();
