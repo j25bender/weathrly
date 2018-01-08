@@ -1,3 +1,15 @@
+.cards {
+    margin: 1rem;
+    min-width: 5.5rem;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;        
+}
+
 .sevenHourCard {
     flex: 1;
     border: 0.01rem solid ghostwhite;
@@ -9,6 +21,14 @@
   
   .temp {
     margin: 0;
+  }
+
+  .sevenHourHeader {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    padding: 1rem 0 1rem 1rem;
+    text-align: left;
   }
   
   @media screen and (max-width: 1010px) {
