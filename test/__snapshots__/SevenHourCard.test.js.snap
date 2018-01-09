@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SevenHourForecast Tests  SevenHourForecast should render 7 SevenHourCard components 1`] = `[Function]`;

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TenDayForecast Tests  TenDayForecast should render 10 TenDayCard components 1`] = `[Function]`;

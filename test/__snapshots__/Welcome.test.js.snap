@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Tests  Welcome should render 1 Welcome component 1`] = `[Function]`;
