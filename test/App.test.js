@@ -27,6 +27,13 @@ describe('App Tests', () => {
      expect(App).toMatchSnapshot();
   });
 
+  it('Should render Welcome component when it does not have any data in localStorage.', () => {
+    global.localStorage.abc = null;
+    const wrapper = mount(<App />);
+    expect(wrapper.find('CurrentWeather').length).toEqual(0);
+    expect(wrapper.find('Welcome').length).toEqual(1);
+  });
+
   it('Should render the weather page when a city is specified', () => {  
     expect(wrapper.state()).toEqual({ CurrentWeather: {},                                                                                        SevenHourForecast: [],                                                                                     TenDayForecast: []
                                     })
