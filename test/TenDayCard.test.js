@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import TenDayForecast from '../lib/TenDayForecast';
-import TenDayCard from '../lib/TenDayCard';
+import Card from '../lib/Card';
 import cleanData from '../lib/cleanData';
 import mockData from '../lib/mockData';
 import 'jest-localstorage-mock';
@@ -25,25 +25,23 @@ describe('TenDayForecast Tests ', () => {
     });
 
     it('TenDayForecast should render 10 TenDayCard components', () => {
-        expect(wrapper.find('TenDayCard').length).toEqual(10);
-        expect(TenDayCard).toMatchSnapshot();
+        expect(wrapper.find('.tenDayCard').length).toEqual(10);
+        expect(TenDayForecast).toMatchSnapshot();
     });
   
     it('Each TenDayCard component should render a day, high / low temp and an icon via an image url', () => {
-        const firstCard = wrapper.find('TenDayCard').first()
-        const lastCard = wrapper.find('TenDayCard').last()
+        const firstCard = wrapper.find('.tenDayCard').first()
+        const lastCard = wrapper.find('.tenDayCard').last()
 
-        expect(firstCard.props().data.day).toEqual('Wednesday')
-        expect(lastCard.props().data.day).toEqual('Friday')
+        expect(firstCard.props().children[0].props.children).toEqual('Wednesday')
+        expect(lastCard.props().children[0].props.children).toEqual('Friday')
 
-        expect(firstCard.props().data.high).toEqual('51')
-        expect(lastCard.props().data.high).toEqual('31')
+        expect(firstCard.find('.day').text()).toEqual('Wednesday')
+        expect(lastCard.find('.day').text()).toEqual('Friday')
 
-        expect(firstCard.props().data.low).toEqual('32')
-        expect(lastCard.props().data.low).toEqual('18')
+        expect(firstCard.find('.hi-lo').text()).toEqual('32˚F / 51˚F')
+        expect(lastCard.find('.hi-lo').text()).toEqual('18˚F / 31˚F')
 
         expect(wrapper.find('.weather-icon').length).toEqual(10);
-        expect(firstCard.props().data.icon_url).toEqual('http://icons.wxug.com/i/c/k/partlycloudy.gif')
-        expect(lastCard.props().data.icon_url).toEqual('http://icons.wxug.com/i/c/k/partlycloudy.gif')
     });
 });

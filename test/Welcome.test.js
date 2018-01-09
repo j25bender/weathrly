@@ -11,7 +11,7 @@ describe('Welcome Tests ', () => {
     
     beforeEach(() => {
         filteredData = cleanData(mockData);
-        wrapper = mount(<Welcome />);
+        wrapper = mount(<Welcome />);        
     });
 
     it('Welcome component should exist', () => {
@@ -19,8 +19,12 @@ describe('Welcome Tests ', () => {
         expect(wrapper.find('.welcomeText').text()).toEqual('Welcome to Weathrly!')        
     });
 
-    it('Welcome should render 1 Welcome component', () => {
+    it('Welcome should render 1 Welcome component', () => {        
+        expect(wrapper.state().inputValue).toEqual('');
+        localStorage.clear();
         expect(wrapper.find('Welcome').length).toEqual(1);
+        localStorage.setItem('location', 'Denver, CO');
+        console.log(wrapper.state().inputValue)
         expect(Welcome).toMatchSnapshot();
     });
   
@@ -37,7 +41,7 @@ describe('Welcome Tests ', () => {
 
         inputValue.simulate('change', { target: { value: 'Boston, MA'}})
         submitButton.simulate('click')
-//state change test
+
         expect(wrapper.instance().handleBtnClick).toHaveBeenCalledTimes(2)
     });
 });
