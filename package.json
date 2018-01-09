@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "./node_modules/webpack/bin/webpack.js",
-    "test": "jest"
+    "test": "jest",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
   },
   "repository": {
     "type": "git",
@@ -40,11 +41,11 @@
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.8.2",
-    "eslint": "^2.6.0",
+    "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.0",
     "eslint-plugin-jsx-a11y": "^1.2.2",
-    "eslint-plugin-react": "^5.1.1",
+    "eslint-plugin-react": "^7.5.1",
     "file-loader": "^0.11.2",
     "jest": "^20.0.4",
     "jest-localstorage-mock": "^2.1.0",
@@ -61,7 +62,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@j25bender/complete-me": "git+https://github.com/j25bender/complete-me.git",
+    "@PreciseSlice/complete-me": "git+https://github.com/PreciseSlice/complete-me.git",
     "save": "^2.3.2"
   }
 }
