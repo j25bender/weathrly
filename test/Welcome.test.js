@@ -27,6 +27,18 @@ describe('Welcome Tests ', () => {
         console.log(wrapper.state().inputValue)
         expect(Welcome).toMatchSnapshot();
     });
+
+    it('Should have a default state of suggestedCities set to an empty array', () => {
+        expect( wrapper.state('suggestedCities') ).toEqual([]);
+    });
+
+    it('Should provide suggestions given input', () =>{
+        const wrapper = mount(<Welcome />);
+        const inputVal = {target: {value: "chicag"}};
+        
+        wrapper.find('input').simulate('change', inputVal);
+        expect( wrapper.state('suggestedCities') ).toEqual(['chicago, il']);
+    });
   
     it('Should call handleBtnClick when button is clicked', () => {
         const submitButton = wrapper.find('button')

@@ -28,16 +28,6 @@ describe('SevenHourForecast Tests ', () => {
         expect(wrapper.find('.sevenHourCard').length).toEqual(7);
         expect(SevenHourForecast).toMatchSnapshot();
     });
-
-    it('should render hourly forcast information when hourly props are passed down', () => {
-        // wrapper = mount(<Card key='0' hour={hour} />);
-    
-        expect(wrapper.find('h3').length).toEqual(1);
-        expect(wrapper.find('img').length).toEqual(1);
-        expect(wrapper.find('h4').length).toEqual(3);
-    
-        expect(wrapper.find('h3').text()).toEqual("Hour: 10:00 PM");
-    });
   
     it('Each SevenHourCard component should render an hour, temp and an icon via an image url', () => {
         const firstCard = wrapper.find('.sevenHourCard').first()

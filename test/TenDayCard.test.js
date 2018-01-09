@@ -28,16 +28,6 @@ describe('TenDayForecast Tests ', () => {
         expect(wrapper.find('.tenDayCard').length).toEqual(10);
         expect(TenDayForecast).toMatchSnapshot();
     });
-
-    it('Should render TenDayForecast props information passed down', () => {
-        wrapper = mount(<Card key='0' day={day} />);
-    
-        expect(wrapper.find('.tenDayCard').length).toEqual(1);
-        // expect(wrapper.find('img').length).toEqual(1);
-        // expect(wrapper.find('h4').length).toEqual(3);
-    
-        // expect(wrapper.find('h3').text()).toEqual("Sunday");
-    });
   
     it('Each TenDayCard component should render a day, high / low temp and an icon via an image url', () => {
         const firstCard = wrapper.find('.tenDayCard').first()

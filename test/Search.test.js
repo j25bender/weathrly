@@ -23,6 +23,14 @@ describe('Search Tests ', () => {
         expect(wrapper.find('Search').length).toEqual(1);
         expect(Search).toMatchSnapshot();
     });
+
+    it('Should provide suggestions given input', () => {
+        const wrapper = mount(<Search />);
+        const event = {target: {value: "Bost"}};
+        
+        wrapper.find('input').simulate('change', event);
+        expect( wrapper.state('suggestedCities') ).toEqual(['boston, ma']);
+      });
   
     it('Should call handleBtnClick when button is clicked', () => {
         const submitButton = wrapper.find('button')
