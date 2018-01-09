@@ -30,5 +30,3 @@ node_modules
 package-lock.json
 
 weatherUndergroundAPIKey.js
-
-mockData.js

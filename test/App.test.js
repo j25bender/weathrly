@@ -28,6 +28,9 @@ describe('App Tests', () => {
     expect(typeof wrapper.state).toEqual('function');
   });
 
+
+// check if no data welcome page else show app
+
   it('Should render the weather page when a city is specified', () => {  
     expect(wrapper.state()).toEqual({ CurrentWeather: {},                                                SevenHourForecast: [],                                             TenDayForecast: []
                                     })

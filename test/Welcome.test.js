@@ -37,7 +37,7 @@ describe('Welcome Tests ', () => {
 
         inputValue.simulate('change', { target: { value: 'Boston, MA'}})
         submitButton.simulate('click')
-
+//state change test
         expect(wrapper.instance().handleBtnClick).toHaveBeenCalledTimes(2)
     });
 });

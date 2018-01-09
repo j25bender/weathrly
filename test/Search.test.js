@@ -40,4 +40,6 @@ describe('Search Tests ', () => {
 
         expect(wrapper.instance().handleBtnClick).toHaveBeenCalledTimes(2)
     });
+
+    // error handling add className div to error find it
 });
