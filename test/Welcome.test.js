@@ -11,7 +11,7 @@ describe('Welcome Tests ', () => {
     
     beforeEach(() => {
         filteredData = cleanData(mockData);
-        wrapper = mount(<Welcome />);
+        wrapper = mount(<Welcome />);        
     });
 
     it('Welcome component should exist', () => {
@@ -19,9 +19,25 @@ describe('Welcome Tests ', () => {
         expect(wrapper.find('.welcomeText').text()).toEqual('Welcome to Weathrly!')        
     });
 
-    it('Welcome should render 1 Welcome component', () => {
+    it('Welcome should render 1 Welcome component', () => {        
+        expect(wrapper.state().inputValue).toEqual('');
+        localStorage.clear();
         expect(wrapper.find('Welcome').length).toEqual(1);
+        localStorage.setItem('location', 'Denver, CO');
+        console.log(wrapper.state().inputValue)
         expect(Welcome).toMatchSnapshot();
+    });
+
+    it('Should have a default state of suggestedCities set to an empty array', () => {
+        expect( wrapper.state('suggestedCities') ).toEqual([]);
+    });
+
+    it('Should provide suggestions given input', () =>{
+        const wrapper = mount(<Welcome />);
+        const inputVal = {target: {value: "chicag"}};
+        
+        wrapper.find('input').simulate('change', inputVal);
+        expect( wrapper.state('suggestedCities') ).toEqual(['chicago, il']);
     });
   
     it('Should call handleBtnClick when button is clicked', () => {

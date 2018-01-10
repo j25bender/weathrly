@@ -4,47 +4,45 @@
     margin: 1rem;
     min-width: 5.5rem;
     padding: 1rem;
-}
-
-.card {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;       
+    justify-content: center; 
 }
 
 .tenDayCard {
-    border: 0.01rem solid ghostwhite;
-    margin: 1rem;
-    max-width: 15rem;
-    min-width: 5.5rem;
-    padding: 1rem;
-  }
+  border: 0.01rem solid ghostwhite;
+  margin: 1rem;
+  max-width: 15rem;
+  min-width: 5.5rem;
+  padding: 1rem;
+}
   
-  .temp {
-    margin: 0;
-  }
+.temp {
+  margin: 0;
+}
 
-  .weather-icon {
-      width: 40%;
+.weather-icon {
+    width: 40%;
+}
+
+.tenDayHeader {
+  width: 100%;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 1.8rem;
+  padding: 1rem 0 1rem 1rem;
+  text-align: left;
+}
+  
+@media screen and (max-width: 1010px) {
+  .card {
+    align-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 15rem;
   }
 
   .tenDayHeader {
-    color: #fff;
-    font-family: "Open Sans";
-    font-size: 1.8rem;
-    padding: 1rem 0 1rem 1rem;
-    text-align: left;
+      text-align: center;
   }
-  
-  @media screen and (max-width: 1010px) {
-    .card {
-      align-content: flex-start;
-      flex-wrap: wrap;
-      min-width: 15rem;
-    }
-
-    .tenDayHeader {
-        text-align: center;
-    }
-  }
+}

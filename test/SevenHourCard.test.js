@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import SevenHourForecast from '../lib/SevenHourForecast';
-import SevenHourCard from '../lib/SevenHourCard';
+import Card from '../lib/Card';
 import cleanData from '../lib/cleanData';
 import mockData from '../lib/mockData';
 import 'jest-localstorage-mock';
@@ -25,22 +25,20 @@ describe('SevenHourForecast Tests ', () => {
     });
 
     it('SevenHourForecast should render 7 SevenHourCard components', () => {
-        expect(wrapper.find('SevenHourCard').length).toEqual(7);
-        expect(SevenHourCard).toMatchSnapshot();
+        expect(wrapper.find('.sevenHourCard').length).toEqual(7);
+        expect(SevenHourForecast).toMatchSnapshot();
     });
   
     it('Each SevenHourCard component should render an hour, temp and an icon via an image url', () => {
-        const firstCard = wrapper.find('SevenHourCard').first()
-        const lastCard = wrapper.find('SevenHourCard').last()
+        const firstCard = wrapper.find('.sevenHourCard').first()
+        const lastCard = wrapper.find('.sevenHourCard').last()
 
-        expect(firstCard.props().data.hour).toEqual('12:00 PM')
-        expect(lastCard.props().data.hour).toEqual('6:00 PM')
+        expect(firstCard.find('.hour').text()).toEqual('12:00 PM')
+        expect(lastCard.find('.hour').text()).toEqual('6:00 PM')
 
-        expect(firstCard.props().data.temp).toEqual('47')
-        expect(lastCard.props().data.temp).toEqual('45')
+        expect(firstCard.find('.temp').text()).toEqual('47˚F')
+        expect(lastCard.find('.temp').text()).toEqual('45˚F')
 
         expect(wrapper.find('.weather-icon').length).toEqual(7);
-        expect(firstCard.props().data.icon_url).toEqual('http://icons.wxug.com/i/c/k/partlycloudy.gif')
-        expect(lastCard.props().data.icon_url).toEqual('http://icons.wxug.com/i/c/k/nt_clear.gif')
     });
 });
