@@ -1,31 +1,28 @@
-# React Starter Kit
+## Synopsis
 
-To install the dependencies:
+Weathrly is an application that supplies the user with real-time weather inforamtion in three separate formats; current weather, seven hour weather forecast and ten day forecast. This application utilizes the Weather Underground API.
 
+## Installation
 ```
+git clone https://github.com/j25bender/weathrly.git
 npm install
-```
-
-To fire up a development server:
-
-```
 npm start
 ```
 
-Once the server is running, you can visit:
+## API Reference
 
-* `http://localhost:8080/webpack-dev-server/` to run your application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run your test suite in the browser.
+You may purchase an API key from https://www.wunderground.com/weather/api/d/pricing.html 
+The Developer plan is free and allows for 10 calls per minute. Other plans available.
 
-To build the static files:
-
-```js
-npm run build
+Add the API key to the src/api/apiKey.js file.
+```
+export const apiKey = 'Add-API-Key-Here';
+```
+## Tests
+```
+npm run test
 ```
 
+## Contributors
 
-To run tests in Node:
-
-```js
-npm test
-```
+Jeff Bender
