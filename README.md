@@ -14,9 +14,9 @@ npm start
 You may purchase an API key from https://www.wunderground.com/weather/api/d/pricing.html 
 The Developer plan is free and allows for 10 calls per minute. Other plans available.
 
-Add the API key to the src/api/apiKey.js file.
+Add the API key to the '../lib/weatherUndergroundAPIKey.js' file.
 ```
-export const apiKey = 'Add-API-Key-Here';
+const key = 'Add-API-Key-Here';
 ```
 ## Tests
 ```
