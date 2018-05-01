@@ -1,30 +1,87 @@
 .current {
+    background: #0f1926;
     color: #fff;
-    display: flex;
+    width: 90%;
     justify-content: space-between;
-    border: 0.02rem solid ghostwhite;
-    padding: 2rem;
-    margin: 1rem;
+    padding: 2rem 0 5px;
+    margin: 10px auto 0px;
+}
+
+#current-band {
+    width: 99.2%;
+    background: #1c2a3d;
+    margin: auto;
+    margin-bottom: 5px;
 }
 
 .currentHeader {
-    color: #fff;
-    font-family: "Open Sans";
+    margin-top: 8px;
     font-size: 1.8rem;
     padding: 0 0 1rem 1rem;
     text-align: left;
+    display: block;
 }
  
 .weather-box {
+    background: #445c82;
+    width: 99%;
     align-items: center;
     display: flex;
     flex: 1;
+    margin: auto;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 6px;
+}
+
+.weather-box .weather-icon {
+    width: 78px;
+    border-radius: 0;
 }
 
 .weather-icon {
-    width: 15rem;
+    margin: 20px;
+    background: #eaeaea;
+    border-radius: 100px;
+}
+
+#location {
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+#condition {
+    font-size: 19px;
+    padding-top: 14px;
+    padding-bottom: 20px;
+}
+
+#day {
+    font-size: 30px;    
+    margin: 14px;
+}
+
+#day-hi-lo {
+    background: #2a3c57;
+}
+
+#temp-sentence {
+    padding: 20px 0;
+    height: 60px;
+}
+
+.hi {
+    color: #6b91c4;
+    margin: 10px;
+}
+
+.low {
+    color: #6b91c4;
+    margin-bottom: 25px;
+}
+
+#sentence {
+    padding: 0 2rem;
 }
 
 @media screen and (max-width: 815px) {

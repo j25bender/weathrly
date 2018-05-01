@@ -4,9 +4,9 @@
 
 .welcome {
     text-align: center;
-    background-color: lightcyan;
-    width: 90vw;
-    height: 10vh;
+    background-color: #1b2a3d;
+    height: 114px;
+    width: 90%;
     margin: auto;
     top: 0;
 }
@@ -15,4 +15,26 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+button {
+    border: none;
+    height: 34px;
+    width: 19%;
+    background: #6b91c4;
+    color: white;
+    font-size: 13.5px;
+}
+
+#searchInput {
+    width: 80%;
+    height: 32px;
+    border: none;
+}
+
+.welcomeText {
+    font-size: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    color: #cecece;
 }

@@ -1,21 +1,27 @@
 .cards {
+    background: #0f1926;
+    margin: 10px auto 0px;
     color: #fff;    
-    border: 0.01rem solid ghostwhite;    
-    margin: 1rem;
     min-width: 5.5rem;
-    padding: 1rem;
+    padding: 0;
+    padding-bottom: 25px;    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center; 
+    justify-content: center;
+    width: 90%;
 }
 
 .tenDayCard {
-  border: 0.01rem solid ghostwhite;
+  background: #2a3c57;
   margin: 1rem;
   max-width: 15rem;
   min-width: 5.5rem;
   padding: 1rem;
+}
+
+.tenDayHeader h3 {
+  margin-bottom: 20px;  
 }
   
 .temp {
@@ -27,12 +33,11 @@
 }
 
 .tenDayHeader {
-  width: 100%;
-  color: #fff;
-  font-family: "Open Sans";
+  margin-top: 8px;
   font-size: 1.8rem;
-  padding: 1rem 0 1rem 1rem;
+  padding-left: 2rem;
   text-align: left;
+  width: 100%;
 }
   
 @media screen and (max-width: 1010px) {
