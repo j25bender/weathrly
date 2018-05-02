@@ -17,7 +17,7 @@
 .currentHeader {
     margin-top: 8px;
     font-size: 1.8rem;
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1rem 2rem;
     text-align: left;
     display: block;
 }
@@ -51,6 +51,7 @@
 }
 
 #condition {
+    color: #6b91c4;
     font-size: 19px;
     padding-top: 14px;
     padding-bottom: 20px;
