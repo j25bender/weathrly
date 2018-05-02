@@ -16,7 +16,7 @@ describe('Search Tests ', () => {
 
     it('Search component should exist', () => {
         expect(wrapper).toBeDefined()
-        expect(wrapper.find('.welcomeText').text()).toEqual('Welcome to Weathrly!')        
+        expect(wrapper.find('.welcomeText').text()).toEqual('WEATHERLY')        
     });
 
     it('Search should render 1 Search component', () => {

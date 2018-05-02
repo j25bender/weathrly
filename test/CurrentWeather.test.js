@@ -16,7 +16,7 @@ describe('CurrentWeather Tests ', () => {
 
     it('CurrentWeather component should exist', () => {
         expect(wrapper).toBeDefined()
-        expect(wrapper.find('.currentHeader').text()).toEqual('Current Weather')        
+        expect(wrapper.find('.currentHeader').text()).toEqual('CURRENT WEATHER')        
     });
 
     it('CurrentWeather should be a function', () => {
@@ -45,6 +45,6 @@ describe('CurrentWeather Tests ', () => {
 
         expect(wrapper.find('CurrentWeather').find('.weather-box').length).toEqual(3);
         
-        expect(wrapper.find('CurrentWeather').props().forecast.icon).toEqual('http://icons.wxug.com/i/c/k/mostlycloudy.gif')
+        expect(wrapper.find('CurrentWeather').props().forecast.icon).toEqual('http://icons.wxug.com/i/c/j/mostlycloudy.gif')
     });
 });

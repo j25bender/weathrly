@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+* {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #cecece;
+}
+
 body {
-    background-image: radial-gradient(
-      farthest-corner at 2rem 2rem,
-      #42aaf4 0%,
-      #0a2963 100%
-    );
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
+  background-image: radial-gradient( farthest-corner at 2rem 2rem, #5d9dca 0%, #121d33 79% );
+  box-sizing: border-box;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
 }

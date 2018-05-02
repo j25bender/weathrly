@@ -17,7 +17,7 @@ describe('TenDayForecast Tests ', () => {
 
     it('TenDayForecast component should exist', () => {
         expect(wrapper).toBeDefined()
-        expect(wrapper.find('h3').text()).toEqual('10 Day Forecast')        
+        expect(wrapper.find('h3').text()).toEqual('10 DAY FORECAST')        
     });
 
     it('TenDayForecast should be a function', () => {
