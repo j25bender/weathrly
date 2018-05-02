@@ -17,7 +17,7 @@ describe('SevenHourForecast Tests ', () => {
 
     it('SevenHourForecast component should exist', () => {
         expect(wrapper).toBeDefined()
-        expect(wrapper.find('h3').text()).toEqual('7 Hour Forecast')        
+        expect(wrapper.find('h3').text()).toEqual('7 HOUR FORECAST')        
     });
 
     it('SevenHourForecast should be a function', () => {
